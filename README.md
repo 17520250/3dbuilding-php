@@ -3,16 +3,16 @@
 2. Composer
 3. Cơ sở dữ liệu từ MySQL
 4. Hiển thị bằng Admin LTE
-
+  
 # Hướng dẫn cài đặt
 1. Cài đặt Composer
-2. Bật wamp hoặc xampp
-3. Tạo database tên 3dbuilding-php, import file 3dbuilding-php.sql
-4. Truy cập đường dẫn http://localhost:8088/3dbuilding-php/
-5. Đăng nhập quyền admin
+2. Tạo file env.php giống file env.example.php, thay port 8088 bằng port của wamp, xampp
+3. Bật wamp hoặc xampp
+4. Tạo database tên 3dbuilding-php, import file 3dbuilding-php.sql
+5. Truy cập đường dẫn http://localhost:port/3dbuilding-php/
+6. Đăng nhập quyền admin
     Tên đăng nhập: admin
     Mật khẩu: 123456
-6. Đăng nhập quyền user
+7. Đăng nhập quyền user
     Tên đăng nhập: user
     Mật khẩu: 123456
-7. Xem file env.php để biết thêm
