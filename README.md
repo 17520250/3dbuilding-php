@@ -10,9 +10,9 @@
 3. Bật wamp hoặc xampp
 4. Tạo database tên 3dbuilding-php, import file 3dbuilding-php.sql
 5. Truy cập đường dẫn http://localhost:port/3dbuilding-php/
-6. Đăng nhập quyền admin
-    Tên đăng nhập: admin
+6. Đăng nhập quyền admin:
+    Tên đăng nhập: admin,
     Mật khẩu: 123456
-7. Đăng nhập quyền user
-    Tên đăng nhập: user
+7. Đăng nhập quyền user:
+    Tên đăng nhập: user,
     Mật khẩu: 123456
