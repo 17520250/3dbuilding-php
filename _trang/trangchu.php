@@ -235,7 +235,7 @@ $tieude = $title;
             $ma_vatlieu = $row->MaVatLieu;
             $get_kientruc = $db->ObjectBuilder()->get('kientruc');
             foreach ($get_kientruc as $row1) {
-              if ($row1->MaLoaiKienTruc == $ma_vatlieu) {
+              if ($row1->MaVatLieu == $ma_vatlieu) {
                 $dem++;
               }
             } ?>
@@ -278,7 +278,7 @@ $tieude = $title;
             $ma_tang = $row->MaTang;
             $get_kientruc = $db->ObjectBuilder()->get('kientruc');
             foreach ($get_kientruc as $row1) {
-              if ($row1->MaLoaiKienTruc == $ma_tang) {
+              if ($row1->MaTang == $ma_tang) {
                 $dem++;
               }
             } ?>
