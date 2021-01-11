@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1:3306
--- Thời gian đã tạo: Th1 08, 2021 lúc 10:40 AM
+-- Thời gian đã tạo: Th1 08, 2021 lúc 04:18 PM
 -- Phiên bản máy phục vụ: 8.0.13
 -- Phiên bản PHP: 7.2.18
 
@@ -38,15 +38,15 @@ CREATE TABLE IF NOT EXISTS `kientruc` (
   `NgayHoanThanh` date NOT NULL,
   `HanSuDungVL` int(10) NOT NULL,
   `HanBaoTri` date NOT NULL,
-  `GeojsonKienTruc` varchar(30) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `GeojsonKienTruc` varchar(30) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `MucCanhBaoBT` int(10) NOT NULL DEFAULT '30',
-  `TrangThaiBT` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '#00ff00',
+  `TrangThaiBT` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '#00ff00',
   `SoNgayDenBT` int(10) DEFAULT NULL,
   PRIMARY KEY (`MaKienTruc`),
   KEY `FK_kientruc_loaikientruc` (`MaLoaiKienTruc`),
   KEY `FK_kientruc_vatlieu` (`MaVatLieu`),
   KEY `FK_kientruc_tang` (`MaTang`)
-) ENGINE=InnoDB AUTO_INCREMENT=61 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=90 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Đang đổ dữ liệu cho bảng `kientruc`
@@ -64,7 +64,35 @@ INSERT INTO `kientruc` (`MaKienTruc`, `MaLoaiKienTruc`, `MaVatLieu`, `MaTang`, `
 (52, 1, 1, 3, 'Sàn nhà tầng 3', '2021-01-07', 12, '2022-01-07', '10070121102102.geojson', 30, '#00ff00', 364),
 (53, 2, 1, 3, 'Trần nhà tầng 3', '2021-01-07', 12, '2022-01-07', '54070121102132.geojson', 30, '#00ff00', 364),
 (54, 3, 2, 3, 'Tường nhà tầng 3', '2021-01-07', 12, '2021-03-04', '100070121102158.geojson', 60, '#ff0000', 55),
-(55, 4, 4, 3, 'Cửa sổ tầng 3', '2021-01-07', 12, '2022-01-07', '90070121102221.geojson', 30, '#00ff00', 364);
+(55, 4, 4, 3, 'Cửa sổ tầng 3', '2021-01-07', 12, '2022-01-07', '90070121102221.geojson', 30, '#00ff00', 364),
+(61, 1, 2, 4, 'Sàn nhà tầng 4', '2021-01-08', 12, '2022-01-08', '52080121032419.geojson', 30, '#00ff00', 365),
+(62, 2, 1, 4, 'Trần nhà tầng 4', '2021-01-08', 12, '2022-01-08', '98080121032526.geojson', 30, '#00ff00', 365),
+(63, 4, 4, 4, 'Cửa sổ tầng 4', '2021-01-08', 12, '2022-01-08', '43080121032550.geojson', 30, '#00ff00', 365),
+(64, 3, 2, 4, 'Tường nhà tầng 4', '2021-01-08', 12, '2022-01-08', '76080121032652.geojson', 30, '#00ff00', 365),
+(65, 1, 2, 5, 'Sàn nhà tầng 5', '2021-01-08', 12, '2021-01-30', '60080121032744.geojson', 30, '#ff0000', 22),
+(66, 2, 6, 5, 'Trần nhà tầng 5', '2021-01-08', 12, '2022-01-08', '31080121032818.geojson', 30, '#00ff00', 365),
+(67, 3, 7, 5, 'Tường nhà tầng 5', '2021-01-08', 12, '2021-01-30', '83080121032857.geojson', 30, '#ff0000', 22),
+(68, 4, 4, 5, 'Cửa sổ tầng 5', '2021-01-08', 12, '2021-01-18', '74080121032935.geojson', 30, '#ff0000', 10),
+(69, 1, 2, 6, 'Sàn nhà tầng 6', '2021-01-08', 12, '2022-01-08', '26080121033020.geojson', 30, '#00ff00', 365),
+(70, 2, 1, 6, 'Trần nhà tầng 6', '2021-01-08', 10, '2021-11-08', '10080121033057.geojson', 30, '#00ff00', 304),
+(71, 3, 3, 6, 'Tường nhà tầng 6', '2021-01-08', 12, '2021-01-11', '15080121033132.geojson', 30, '#ff0000', 3),
+(72, 4, 4, 6, 'Cửa sổ tầng 6', '2021-01-08', 12, '2022-01-08', '42080121033216.geojson', 30, '#00ff00', 365),
+(73, 1, 1, 7, 'Sàn nhà tầng 7', '2021-01-08', 10, '2021-11-08', '87080121033338.geojson', 30, '#00ff00', 304),
+(74, 1, 2, 8, 'Sàn nhà tầng 8', '2021-01-08', 12, '2022-01-08', '47080121033408.geojson', 30, '#00ff00', 365),
+(75, 3, 3, 7, 'Tường nhà tầng 7', '2021-01-08', 12, '2022-01-08', '70080121033434.geojson', 30, '#00ff00', 365),
+(76, 3, 3, 8, 'Tường nhà tầng 8', '2021-01-08', 12, '2022-01-08', '65080121033456.geojson', 30, '#00ff00', 365),
+(77, 2, 6, 7, 'Trần nhà tầng 7', '2021-01-08', 12, '2021-01-31', '100080121033547.geojson', 30, '#ff0000', 23),
+(78, 2, 6, 8, 'Trần nhà tầng 8', '2021-01-08', 12, '2022-01-08', '23080121033617.geojson', 30, '#00ff00', 365),
+(79, 4, 4, 8, 'Cửa sổ tầng 8', '2021-01-08', 12, '2021-01-12', '13080121033737.geojson', 30, '#ff0000', 4),
+(80, 4, 4, 7, 'Cửa sổ tầng 7', '2021-01-08', 12, '2022-01-08', '44080121033800.geojson', 30, '#00ff00', 365),
+(81, 1, 2, 9, 'Sàn nhà tầng 9', '2021-01-08', 10, '2021-11-08', '33080121033854.geojson', 30, '#00ff00', 304),
+(82, 1, 1, 10, 'Sàn nhà tầng 10', '2021-01-08', 12, '2022-01-08', '4080121033920.geojson', 30, '#00ff00', 365),
+(83, 3, 7, 9, 'Tường nhà tầng 9', '2021-01-08', 12, '2022-01-08', '53080121034039.geojson', 30, '#00ff00', 365),
+(84, 4, 4, 9, 'Cửa sổ tầng 9', '2021-01-08', 12, '2022-01-08', '3080121034106.geojson', 30, '#00ff00', 365),
+(85, 2, 6, 9, 'Trần nhà tầng 9', '2021-01-08', 12, '2022-01-08', '82080121034134.geojson', 30, '#00ff00', 365),
+(86, 4, 4, 10, 'Cửa sổ tầng 10', '2021-01-08', 12, '2022-01-08', '48080121034258.geojson', 30, '#00ff00', 365),
+(87, 3, 3, 10, 'Tường nhà tầng 10', '2021-01-08', 12, '2022-01-08', '53080121034331.geojson', 30, '#00ff00', 365),
+(88, 2, 6, 10, 'Trần nhà tầng 10', '2021-01-08', 12, '2021-01-09', '3080121034420.geojson', 60, '#ff0000', 1);
 
 -- --------------------------------------------------------
 
@@ -76,8 +104,8 @@ DROP TABLE IF EXISTS `loaikientruc`;
 CREATE TABLE IF NOT EXISTS `loaikientruc` (
   `MaLoaiKienTruc` int(10) NOT NULL AUTO_INCREMENT,
   `TenLoaiKienTruc` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `Symbol` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `Color` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `Symbol` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `Color` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `Size` double(8,2) NOT NULL DEFAULT '0.00',
   `Width` double(8,2) NOT NULL DEFAULT '0.00',
   `Height` double(8,2) NOT NULL DEFAULT '0.00',
@@ -139,7 +167,7 @@ CREATE TABLE IF NOT EXISTS `toanha` (
   `ViTri` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `NamHoanThanh` int(11) NOT NULL,
   PRIMARY KEY (`MaToaNha`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Đang đổ dữ liệu cho bảng `toanha`
